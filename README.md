@@ -49,7 +49,7 @@ This repository is designed to:
 | ✅ Module 1 - Introduction to Jenkins | Completed |
 | ✅ Module 2 - CI/CD Fundamentals | Completed |
 | ✅ Module 3 - Jenkins Installation | Completed |
-| ⏳ Module 4 - Jenkins Dashboard | In Progress |
+| ✅ Module 4 - Jenkins Dashboard | completed |
 | ⏳ Module 5 - Freestyle Jobs | Coming Soon |
 | ⏳ Module 6 - Jenkins Pipelines | Coming Soon |
 | ⏳ Module 7 - GitHub Integration | Coming Soon |
