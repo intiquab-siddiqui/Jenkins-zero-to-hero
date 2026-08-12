@@ -4,9 +4,15 @@ pipeline {
 
     stages {
 
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code'
+            }
+        }
+
         stage('Build') {
             steps {
-                echo 'Starting Build'
+                echo 'Building application'
                 sh 'pwd'
                 sh 'whoami'
             }
@@ -14,7 +20,7 @@ pipeline {
 
         stage('Test') {
             steps {
-                echo 'Running Tests'
+                echo 'Running tests'
                 sh 'date'
                 sh 'hostname'
             }
