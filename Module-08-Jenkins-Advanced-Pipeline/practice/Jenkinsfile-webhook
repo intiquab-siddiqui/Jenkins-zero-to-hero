@@ -1,0 +1,39 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Webhook Test') {
+            steps {
+                echo 'GitHub webhook successfully triggered Jenkins!'
+            }
+        }
+
+        stage('Check Git') {
+            steps {
+                sh 'git --version'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Webhook pipeline build completed successfully!'
+            }
+        }
+    }
+
+    post {
+        success {
+            echo 'GitHub Webhook Pipeline: SUCCESS'
+        }
+
+        failure {
+            echo 'GitHub Webhook Pipeline: FAILED'
+        }
+
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
+}
