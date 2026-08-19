@@ -1,0 +1,59 @@
+pipeline {
+
+    agent any
+
+    stages {
+
+        stage('Checkout') {
+            steps {
+                echo 'Checking out source code...'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                echo 'Building application...'
+
+                // Replace with your project's actual build command
+                sh 'echo Build successful'
+            }
+        }
+
+        stage('Test') {
+            steps {
+                echo 'Running tests...'
+
+                // Replace with your project's actual test command
+                sh 'echo Tests passed'
+            }
+        }
+
+        stage('Docker Build') {
+            steps {
+                echo 'Building Docker image...'
+
+                // Change the image name and Dockerfile path for your project
+                sh '''
+                    docker build \
+                    -t my-app:v1 \
+                    -f Dockerfile .
+                '''
+            }
+        }
+    }
+
+    post {
+
+        success {
+            echo 'CI pipeline completed successfully!'
+        }
+
+        failure {
+            echo 'CI pipeline failed!'
+        }
+
+        always {
+            echo 'Pipeline execution completed.'
+        }
+    }
+}
