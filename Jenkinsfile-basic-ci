@@ -36,8 +36,9 @@ pipeline {
                 sh '''
                     docker build \
                     -t my-app:v1 \
-                    -f Dockerfile .
-                '''
+                    -f Module-08-Jenkins-Advanced-Pipeline/practice/docker-build/Dockerfile .
+                   '''                
+               
             }
         }
     }
